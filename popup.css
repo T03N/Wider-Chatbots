@@ -1,0 +1,128 @@
+body {
+    width: 280px;
+    margin: 0;
+    padding: 16px;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider.round {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #333333;
+    transition: .3s;
+    border-radius: 20px;
+}
+.slider.round:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #aaaaaa;
+    transition: .3s;
+    border-radius: 50%;
+}
+input:checked + .slider.round {
+    background-color: #ffffff;
+}
+input:checked + .slider.round:before {
+    transform: translateX(16px);
+    background-color: #121212;
+}
+
+/* Main controls */
+.control-group {
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+#widthValue {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+input[type=range] {
+    width: 100%;
+    background: #333333;
+    height: 4px;
+    border-radius: 2px;
+    appearance: none;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    border: 2px solid #121212;
+    box-shadow: 0 0 0 1px #444;
+}
+
+input[type=range]::-webkit-slider-thumb:hover { background: #e0e0e0; }
+
+.presets {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+button {
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #cccccc;
+    border: 1px solid #333333;
+    padding: 6px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2a2a2a;
+    border-color: #666666;
+    color: #ffffff;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

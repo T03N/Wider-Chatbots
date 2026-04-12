@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wider-Chatbots</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Wider-Chatbots</h2>
+            <label class="switch">
+                <input type="checkbox" id="enableToggle" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <div class="control-group" id="controls">
+            <label for="widthSlider">Chat Width: <span id="widthValue">1000</span>px</label>
+            <input type="range" id="widthSlider" min="700" max="1800" step="50" value="1000">
+        </div>
+        
+        <div class="presets" id="presets">
+            <button data-width="800">Narrow</button>
+            <button data-width="1200">Wide</button>
+            <button data-width="1500">Ultra</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
