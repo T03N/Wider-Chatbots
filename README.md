@@ -1,5 +1,7 @@
 # Wider Chatbots
 
+![wider-chatbots](https://github.com/user-attachments/assets/6a6e7713-8f8c-4d5e-8f77-40729bf5a8d0)
+
 A simple, lightweight browser extension that dynamically adjusts the conversation area in **ChatGPT** and **Google Gemini**, giving you a wider and more comfortable reading and typing experience. 
 
 I built this because I found it really frustrating how both ChatGPT and Gemini constrict their chat interfaces to such a narrow, fixed width for absolutely no reason (maybe there is idk lol). It leaves huge amounts of empty, wasted space on modern monitors, so this extension easily overrides that layout so you can actually use your full screen real estate :)
