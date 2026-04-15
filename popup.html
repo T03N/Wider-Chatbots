@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Wider-Chatbots</title>
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -14,12 +16,12 @@
                 <span class="slider round"></span>
             </label>
         </div>
-        
+
         <div class="control-group" id="controls">
             <label for="widthSlider">Chat Width: <span id="widthValue">1000</span>px</label>
-            <input type="range" id="widthSlider" min="700" max="1800" step="50" value="1000">
+            <input type="range" id="widthSlider" min="200" max="3000" step="50" value="1000">
         </div>
-        
+
         <div class="presets" id="presets">
             <button data-width="800">Narrow</button>
             <button data-width="1200">Wide</button>
@@ -28,4 +30,5 @@
     </div>
     <script src="popup.js"></script>
 </body>
+
 </html>
