@@ -10,28 +10,32 @@ function injectStyles() {
             }
 
             /* Gemini stuff (updated for 2026 UI) */
-            body.wider-chatbots-on .conversation-container,
-            body.wider-chatbots-on .chat-container,
-            body.wider-chatbots-on .input-area-container,
-            body.wider-chatbots-on input-container,
-            body.wider-chatbots-on upload-card,
-            body.wider-chatbots-on .upload-card,
-            body.wider-chatbots-on [class*="drop-zone"],
-            body.wider-chatbots-on [class*="drag-over"],
-            body.wider-chatbots-on .mat-menu-panel,
-            body.wider-chatbots-on .response-container,
-            body.wider-chatbots-on .model-response-text,
-            body.wider-chatbots-on .user-query-container {
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .conversation-container,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .chat-container,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .input-area-container,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) input-container,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) upload-card,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .upload-card,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) [class*="drop-zone"],
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) [class*="drag-over"],
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .mat-menu-panel,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .response-container,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .model-response-text {
                 max-width: var(--custom-chat-width) !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
                 transition: max-width 0.1s ease-out;
             }
 
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .user-query-container {
+                max-width: var(--custom-chat-width) !important;
+                transition: max-width 0.1s ease-out;
+            }
+
             /* Ensure inner text and code wrappers stretch to fill the newly widened parent */
-            body.wider-chatbots-on .conversation-container user-query,
-            body.wider-chatbots-on .user-query-bubble-with-background,
-            body.wider-chatbots-on .model-response-text .markdown {
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .conversation-container user-query,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .user-query-bubble-with-background,
+            body.wider-chatbots-on:not(:has(chat-window.center-input-layout)) .model-response-text .markdown {
                 max-width: 100% !important;
             }
 
